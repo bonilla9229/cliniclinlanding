@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#F4F8FD"/>
+
+  <!-- Left sidebar -->
+  <rect width="200" height="500" fill="#0D2340"/>
+  <rect x="16" y="16" width="168" height="48" rx="10" fill="#1A73C8" opacity="0.2"/>
+  <rect x="28" y="26" width="30" height="30" rx="7" fill="#1A73C8"/>
+  <path d="M33 41 L37 37 L43 43 L47 37 L51 41" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="66" y="46" font-family="sans-serif" font-size="14" font-weight="700" fill="white">ClinicLin</text>
+
+  <rect x="12" y="82" width="176" height="36" rx="8" fill="#1A73C8" opacity="0.3"/>
+  <text x="46" y="105" font-family="sans-serif" font-size="12" font-weight="600" fill="white">Dashboard</text>
+  <rect x="12" y="126" width="176" height="36" rx="8" fill="transparent"/>
+  <text x="46" y="149" font-family="sans-serif" font-size="12" fill="#8ab4d8">Equipo</text>
+  <rect x="12" y="170" width="176" height="36" rx="8" fill="transparent"/>
+  <text x="46" y="193" font-family="sans-serif" font-size="12" fill="#8ab4d8">Pacientes</text>
+  <rect x="12" y="214" width="176" height="36" rx="8" fill="transparent"/>
+  <text x="46" y="237" font-family="sans-serif" font-size="12" fill="#8ab4d8">Citas</text>
+  <rect x="12" y="258" width="176" height="36" rx="8" fill="transparent"/>
+  <text x="46" y="281" font-family="sans-serif" font-size="12" fill="#8ab4d8">Facturación</text>
+
+  <circle cx="32" cy="470" r="12" fill="#1A73C8" opacity="0.5"/>
+  <text x="22" y="474" font-family="sans-serif" font-size="10" font-weight="700" fill="#fff">AD</text>
+  <text x="50" y="467" font-family="sans-serif" font-size="11" fill="#8ab4d8">Admin</text>
+  <text x="50" y="479" font-family="sans-serif" font-size="10" fill="#4a6a8a">Administrador</text>
+
+  <!-- Top bar -->
+  <rect x="200" y="0" width="600" height="60" fill="white"/>
+  <rect x="200" y="59" width="600" height="1" fill="#D8E5F2"/>
+  <text x="220" y="32" font-family="sans-serif" font-size="16" font-weight="700" fill="#0D2340">Dashboard General</text>
+  <text x="220" y="50" font-family="sans-serif" font-size="11" fill="#5B6F8A">Resumen del día — Viernes 21 de marzo, 2026</text>
+  <rect x="680" y="16" width="100" height="30" rx="7" fill="#1A73C8" opacity="0.1"/>
+  <text x="693" y="35" font-family="sans-serif" font-size="11" font-weight="600" fill="#1A73C8">+ Nueva cita</text>
+
+  <!-- KPI cards -->
+  <!-- Card 1 -->
+  <rect x="216" y="74" width="128" height="76" rx="10" fill="white" stroke="#D8E5F2" stroke-width="1"/>
+  <text x="232" y="96" font-family="sans-serif" font-size="10" fill="#5B6F8A">Citas hoy</text>
+  <text x="232" y="126" font-family="sans-serif" font-size="30" font-weight="700" fill="#0D2340">24</text>
+  <rect x="298" y="88" width="34" height="16" rx="4" fill="#D1FAE5"/>
+  <text x="303" y="100" font-family="sans-serif" font-size="9" font-weight="600" fill="#065F46">▲ 12%</text>
+
+  <!-- Card 2 -->
+  <rect x="354" y="74" width="128" height="76" rx="10" fill="white" stroke="#D8E5F2" stroke-width="1"/>
+  <text x="370" y="96" font-family="sans-serif" font-size="10" fill="#5B6F8A">Pacientes mes</text>
+  <text x="370" y="126" font-family="sans-serif" font-size="30" font-weight="700" fill="#0D2340">312</text>
+  <rect x="436" y="88" width="34" height="16" rx="4" fill="#D1FAE5"/>
+  <text x="441" y="100" font-family="sans-serif" font-size="9" font-weight="600" fill="#065F46">▲ 8%</text>
+
+  <!-- Card 3 -->
+  <rect x="492" y="74" width="128" height="76" rx="10" fill="white" stroke="#D8E5F2" stroke-width="1"/>
+  <text x="508" y="96" font-family="sans-serif" font-size="10" fill="#5B6F8A">Ingresos mes</text>
+  <text x="508" y="126" font-family="sans-serif" font-size="24" font-weight="700" fill="#0D2340">$4,820</text>
+  <rect x="574" y="88" width="34" height="16" rx="4" fill="#D1FAE5"/>
+  <text x="579" y="100" font-family="sans-serif" font-size="9" font-weight="600" fill="#065F46">▲ 5%</text>
+
+  <!-- Card 4 highlight -->
+  <rect x="630" y="74" width="150" height="76" rx="10" fill="#0D2340"/>
+  <text x="646" y="96" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.6)">Doctores activos</text>
+  <text x="646" y="126" font-family="sans-serif" font-size="30" font-weight="700" fill="white">8</text>
+  <rect x="668" y="138" width="60" height="8" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="668" y="138" width="45" height="8" rx="4" fill="#1A73C8"/>
+
+  <!-- Chart area -->
+  <rect x="216" y="162" width="364" height="200" rx="12" fill="white" stroke="#D8E5F2" stroke-width="1"/>
+  <text x="232" y="186" font-family="sans-serif" font-size="12" font-weight="700" fill="#0D2340">Citas por semana</text>
+  <!-- Y axis labels -->
+  <text x="222" y="225" font-family="sans-serif" font-size="9" fill="#5B6F8A">30</text>
+  <text x="222" y="255" font-family="sans-serif" font-size="9" fill="#5B6F8A">20</text>
+  <text x="222" y="285" font-family="sans-serif" font-size="9" fill="#5B6F8A">10</text>
+  <text x="224" y="345" font-family="sans-serif" font-size="9" fill="#5B6F8A">0</text>
+  <!-- Grid lines -->
+  <line x1="240" y1="220" x2="568" y2="220" stroke="#F4F8FD" stroke-width="1"/>
+  <line x1="240" y1="250" x2="568" y2="250" stroke="#F4F8FD" stroke-width="1"/>
+  <line x1="240" y1="280" x2="568" y2="280" stroke="#F4F8FD" stroke-width="1"/>
+  <line x1="240" y1="340" x2="568" y2="340" stroke="#D8E5F2" stroke-width="1"/>
+  <!-- Bars -->
+  <rect x="255" y="270" width="32" height="70" rx="4" fill="#E8F1FB"/>
+  <rect x="297" y="240" width="32" height="100" rx="4" fill="#1A73C8"/>
+  <rect x="339" y="255" width="32" height="85" rx="4" fill="#E8F1FB"/>
+  <rect x="381" y="225" width="32" height="115" rx="4" fill="#1A73C8"/>
+  <rect x="423" y="248" width="32" height="92" rx="4" fill="#E8F1FB"/>
+  <rect x="465" y="232" width="32" height="108" rx="4" fill="#1A73C8" opacity="0.5"/>
+  <rect x="507" y="238" width="32" height="102" rx="4" fill="#1A73C8" opacity="0.3"/>
+  <!-- X labels -->
+  <text x="260" y="356" font-family="sans-serif" font-size="9" fill="#5B6F8A">Lun</text>
+  <text x="302" y="356" font-family="sans-serif" font-size="9" fill="#5B6F8A">Mar</text>
+  <text x="344" y="356" font-family="sans-serif" font-size="9" fill="#5B6F8A">Mié</text>
+  <text x="386" y="356" font-family="sans-serif" font-size="9" fill="#5B6F8A">Jue</text>
+  <text x="428" y="356" font-family="sans-serif" font-size="9" fill="#5B6F8A">Vie</text>
+
+  <!-- Right panel: upcoming appointments -->
+  <rect x="592" y="162" width="188" height="200" rx="12" fill="white" stroke="#D8E5F2" stroke-width="1"/>
+  <text x="608" y="186" font-family="sans-serif" font-size="12" font-weight="700" fill="#0D2340">Próximas citas</text>
+  <!-- Appointment items -->
+  <rect x="606" y="196" width="158" height="38" rx="7" fill="#F4F8FD"/>
+  <circle cx="622" cy="215" r="10" fill="#1A73C8" opacity="0.15"/>
+  <text x="617" y="219" font-family="sans-serif" font-size="8" font-weight="700" fill="#1A73C8">ML</text>
+  <text x="636" y="210" font-family="sans-serif" font-size="10" font-weight="600" fill="#0D2340">María López</text>
+  <text x="636" y="222" font-family="sans-serif" font-size="9" fill="#5B6F8A">09:00 · Med. General</text>
+  <rect x="720" y="204" width="36" height="16" rx="4" fill="#D1FAE5"/>
+  <text x="724" y="216" font-family="sans-serif" font-size="8" font-weight="600" fill="#065F46">Conf.</text>
+
+  <rect x="606" y="240" width="158" height="38" rx="7" fill="#F4F8FD"/>
+  <circle cx="622" cy="259" r="10" fill="#0EA5A0" opacity="0.15"/>
+  <text x="617" y="263" font-family="sans-serif" font-size="8" font-weight="700" fill="#0EA5A0">CR</text>
+  <text x="636" y="254" font-family="sans-serif" font-size="10" font-weight="600" fill="#0D2340">Carlos Ruiz</text>
+  <text x="636" y="266" font-family="sans-serif" font-size="9" fill="#5B6F8A">10:30 · Pediatría</text>
+  <rect x="720" y="248" width="36" height="16" rx="4" fill="#E8F1FB"/>
+  <text x="723" y="260" font-family="sans-serif" font-size="8" font-weight="600" fill="#1A73C8">Esper.</text>
+
+  <rect x="606" y="284" width="158" height="38" rx="7" fill="#F4F8FD"/>
+  <circle cx="622" cy="303" r="10" fill="#7C3AED" opacity="0.15"/>
+  <text x="617" y="307" font-family="sans-serif" font-size="8" font-weight="700" fill="#7C3AED">AT</text>
+  <text x="636" y="298" font-family="sans-serif" font-size="10" font-weight="600" fill="#0D2340">Ana Torres</text>
+  <text x="636" y="310" font-family="sans-serif" font-size="9" fill="#5B6F8A">11:00 · Cardiología</text>
+  <rect x="718" y="292" width="40" height="16" rx="4" fill="#FEF3C7"/>
+  <text x="722" y="304" font-family="sans-serif" font-size="8" font-weight="600" fill="#92400E">Pend.</text>
+
+  <!-- Bottom row: recent activity + mini donut -->
+  <rect x="216" y="374" width="240" height="106" rx="12" fill="white" stroke="#D8E5F2" stroke-width="1"/>
+  <text x="232" y="396" font-family="sans-serif" font-size="12" font-weight="700" fill="#0D2340">Actividad reciente</text>
+  <circle cx="232" cy="416" r="4" fill="#22C55E"/>
+  <text x="244" y="420" font-family="sans-serif" font-size="10" fill="#0D2340">Nueva receta — Dr. Morales</text>
+  <text x="244" y="432" font-family="sans-serif" font-size="9" fill="#5B6F8A">hace 12 min</text>
+  <circle cx="232" cy="448" r="4" fill="#1A73C8"/>
+  <text x="244" y="452" font-family="sans-serif" font-size="10" fill="#0D2340">Factura generada #0234</text>
+  <text x="244" y="464" font-family="sans-serif" font-size="9" fill="#5B6F8A">hace 45 min</text>
+
+  <!-- Mini donut chart -->
+  <rect x="468" y="374" width="152" height="106" rx="12" fill="white" stroke="#D8E5F2" stroke-width="1"/>
+  <text x="484" y="396" font-family="sans-serif" font-size="11" font-weight="700" fill="#0D2340">Por especialidad</text>
+  <circle cx="510" cy="440" r="26" fill="none" stroke="#E8F1FB" stroke-width="12"/>
+  <circle cx="510" cy="440" r="26" fill="none" stroke="#1A73C8" stroke-width="12" stroke-dasharray="65 99" stroke-dashoffset="25"/>
+  <circle cx="510" cy="440" r="26" fill="none" stroke="#0EA5A0" stroke-width="12" stroke-dasharray="25 99" stroke-dashoffset="-40"/>
+  <text x="504" y="444" font-family="sans-serif" font-size="9" font-weight="700" fill="#0D2340">65%</text>
+  <rect x="548" y="424" width="8" height="8" rx="2" fill="#1A73C8"/>
+  <text x="560" y="432" font-family="sans-serif" font-size="9" fill="#5B6F8A">Med. Gral</text>
+  <rect x="548" y="438" width="8" height="8" rx="2" fill="#0EA5A0"/>
+  <text x="560" y="446" font-family="sans-serif" font-size="9" fill="#5B6F8A">Pediatría</text>
+  <rect x="548" y="452" width="8" height="8" rx="2" fill="#E8F1FB"/>
+  <text x="560" y="460" font-family="sans-serif" font-size="9" fill="#5B6F8A">Otros</text>
+
+  <!-- Invoice summary -->
+  <rect x="632" y="374" width="148" height="106" rx="12" fill="#0D2340"/>
+  <text x="648" y="396" font-family="sans-serif" font-size="11" font-weight="700" fill="white">Ingresos hoy</text>
+  <text x="648" y="426" font-family="sans-serif" font-size="26" font-weight="700" fill="white">$620</text>
+  <text x="648" y="442" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.5)">Meta diaria: $800</text>
+  <rect x="648" y="452" width="116" height="8" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="648" y="452" width="90" height="8" rx="4" fill="#1A73C8"/>
+  <text x="648" y="473" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.5)">78% completado</text>
+</svg>

@@ -67,8 +67,20 @@
     font-size: 0.875rem; font-weight: 500;
     color: var(--muted); text-decoration: none;
     transition: color .2s;
+    position: relative; padding-bottom: 4px;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: -2px; left: 0; right: 0;
+    height: 2px; background: var(--blue);
+    border-radius: 2px;
+    transform: scaleX(0); transform-origin: center;
+    transition: transform .25s ease;
   }
   .nav-links a:hover { color: var(--blue); }
+  .nav-links a:hover::after,
+  .nav-links a.active { color: var(--blue); }
+  .nav-links a.active::after { transform: scaleX(1); }
   .nav-cta {
     background: var(--blue);
     color: #fff !important;
@@ -251,38 +263,106 @@
   .centered .section-sub { margin-left: auto; margin-right: auto; }
   .max-w { max-width: 1100px; margin: 0 auto; }
 
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+  /* ── FEATURES TABS ── */
+  .feat-tabs-wrap {
+    display: flex; gap: 40px; align-items: flex-start;
   }
-  .feat-card {
+  .feat-tabs-sidebar {
+    flex: 0 0 280px;
+    display: flex; flex-direction: column; gap: 4px;
+    position: sticky; top: 88px;
+  }
+  .feat-tab {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 18px; border-radius: var(--radius);
+    cursor: pointer; border: 1.5px solid transparent;
+    transition: all .22s ease;
+    background: transparent;
+    user-select: none;
+  }
+  .feat-tab:hover { background: var(--blue-light); border-color: var(--border); }
+  .feat-tab.active {
+    background: var(--blue-light);
+    border-color: var(--blue);
+    box-shadow: 0 4px 14px rgba(26,115,200,0.12);
+  }
+  .feat-tab-icon {
+    width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
+    background: var(--border);
+    display: flex; align-items: center; justify-content: center;
+    transition: background .22s;
+  }
+  .feat-tab-icon svg { width: 20px; height: 20px; transition: color .22s; }
+  .feat-tab.active .feat-tab-icon { background: var(--blue); }
+  .feat-tab.active .feat-tab-icon svg { color: #fff !important; }
+  .feat-tab-label { font-size: 0.88rem; font-weight: 600; color: var(--navy); }
+  .feat-tab-sub { font-size: 0.75rem; color: var(--muted); margin-top: 1px; }
+
+  .feat-content-area {
+    flex: 1; min-width: 0;
+  }
+  .feat-panel {
+    display: none;
+    animation: fadeUp .35s ease forwards;
+  }
+  .feat-panel.active { display: block; }
+  .feat-panel-inner {
     background: var(--white);
     border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 28px;
-    transition: transform .2s, box-shadow .2s;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(13,35,64,0.07);
   }
-  .feat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(13,35,64,0.08); }
-  .feat-icon {
-    width: 48px; height: 48px; border-radius: 12px;
-    background: var(--blue-light);
+  .feat-panel-img {
+    width: 100%; height: 340px;
+    background: var(--bg);
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--border);
     display: flex; align-items: center; justify-content: center;
-    margin-bottom: 16px;
   }
-  .feat-icon svg { width: 22px; height: 22px; color: var(--blue); }
-  .feat-icon.teal { background: #CCFBF1; }
-  .feat-icon.teal svg { color: var(--teal); }
-  .feat-icon.amber { background: #FEF3C7; }
-  .feat-icon.amber svg { color: #D97706; }
-  .feat-icon.purple { background: #EDE9FE; }
-  .feat-icon.purple svg { color: #7C3AED; }
-  .feat-icon.pink { background: #FCE7F3; }
-  .feat-icon.pink svg { color: #BE185D; }
-  .feat-icon.green { background: #DCFCE7; }
-  .feat-icon.green svg { color: #15803D; }
-  .feat-card h3 { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
-  .feat-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
+  .feat-panel-img img {
+    width: 100%; height: 100%; object-fit: cover; object-position: top;
+  }
+  /* Illustration placeholder when no screenshot available */
+  .feat-panel-img .feat-illustration {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 16px; height: 100%; width: 100%;
+  }
+  .feat-illustration-icon {
+    width: 80px; height: 80px; border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .feat-illustration-icon svg { width: 40px; height: 40px; }
+  .feat-panel-body { padding: 28px 32px 32px; }
+  .feat-panel-body h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem; font-weight: 600; color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .feat-panel-body p {
+    font-size: 0.9rem; color: var(--muted); line-height: 1.8;
+    margin-bottom: 20px; max-width: 540px;
+  }
+  .feat-bullets {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    list-style: none;
+  }
+  .feat-bullets li {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.83rem; color: var(--text); font-weight: 500;
+  }
+  .feat-bullet-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--blue); flex-shrink: 0;
+  }
+  @media (max-width: 900px) {
+    .feat-tabs-wrap { flex-direction: column; }
+    .feat-tabs-sidebar { flex: none; width: 100%; position: static; flex-direction: row; flex-wrap: wrap; }
+    .feat-tab { flex: 1 1 130px; flex-direction: column; text-align: center; gap: 8px; }
+    .feat-bullets { grid-template-columns: 1fr; }
+    .feat-panel-img { height: 220px; }
+  }
 
   /* ── PRICING ── */
   .pricing-section { background: var(--bg); padding: 90px 5%; }
@@ -403,21 +483,19 @@
   .steps-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0;
+    gap: 24px;
     counter-reset: step;
     position: relative;
   }
   .step {
-    padding: 28px 30px;
+    padding: 28px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
     position: relative;
+    transition: transform .2s, box-shadow .2s;
   }
-  .step::before {
-    content: '';
-    position: absolute; top: 40px; right: 0;
-    width: 1px; height: 60px;
-    background: var(--border);
-  }
-  .step:last-child::before { display: none; }
+  .step:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(13,35,64,0.08); }
   .step-num {
     width: 38px; height: 38px; border-radius: 50%;
     background: var(--blue);
@@ -426,6 +504,21 @@
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 16px;
   }
+  .step-img {
+    width: 100%; height: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .step-img .step-illustration {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    padding: 16px;
+  }
+  .step-illustration svg { width: 48px; height: 48px; color: var(--blue); opacity: 0.4; }
   .step h3 { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
   .step p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
 
@@ -521,7 +614,6 @@
     .stats-inner { grid-template-columns: repeat(2, 1fr); }
     .nav-links { display: none; }
     .steps-grid { grid-template-columns: 1fr 1fr; }
-    .step::before { display: none; }
   }
   @media (max-width: 500px) {
     .stats-inner { grid-template-columns: 1fr 1fr; }
@@ -543,7 +635,6 @@
     <li><a href="#funciones">Funciones</a></li>
     <li><a href="#como-funciona">Cómo funciona</a></li>
     <li><a href="#precios">Precios</a></li>
-    <li><a href="#precios" class="nav-cta">Solicitar demo</a></li>
   </ul>
 </nav>
 
@@ -601,87 +692,201 @@
   </div>
 </section>
 
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="stats-inner">
-    <div>
-      <div class="stat-num"><span>+</span>500</div>
-      <div class="stat-label">Doctores activos</div>
-    </div>
-    <div>
-      <div class="stat-num"><span>+</span>50K</div>
-      <div class="stat-label">Pacientes gestionados</div>
-    </div>
-    <div>
-      <div class="stat-num">99<span>%</span></div>
-      <div class="stat-label">Disponibilidad</div>
-    </div>
-    <div>
-      <div class="stat-num"><span>+</span>5</div>
-      <div class="stat-label">Años de experiencia</div>
-    </div>
-  </div>
-</div>
 
-<!-- FEATURES -->
+<!-- FEATURES (Tabbed) -->
 <section class="section" id="funciones">
   <div class="max-w">
-    <div class="centered">
+    <div class="centered" style="margin-bottom: 2.5rem;">
       <div class="section-label">Módulos principales</div>
       <h2 class="section-title">Todo lo que tu clínica necesita</h2>
       <p class="section-sub">Una solución completa para la gestión clínica diaria, diseñada para equipos médicos en Panamá.</p>
     </div>
-    <div class="features-grid">
-      <div class="feat-card">
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+
+    <div class="feat-tabs-wrap">
+      <!-- SIDEBAR TABS -->
+      <div class="feat-tabs-sidebar" id="feat-tabs">
+        <div class="feat-tab active" onclick="showFeat('doctores')" data-feat="doctores">
+          <div class="feat-tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--blue)"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div><div class="feat-tab-label">Doctores</div><div class="feat-tab-sub">Gestión de médicos</div></div>
         </div>
-        <h3>Gestión de Doctores</h3>
-        <p>Administra perfiles, especialidades, horarios y agendas de todos los médicos de tu clínica desde un solo lugar.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon teal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="feat-tab" onclick="showFeat('pacientes')" data-feat="pacientes">
+          <div class="feat-tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--teal)"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div><div class="feat-tab-label">Pacientes</div><div class="feat-tab-sub">Registro y perfiles</div></div>
         </div>
-        <h3>Pacientes</h3>
-        <p>Registro completo de pacientes con datos personales, historial de visitas, alergias y condiciones previas.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon amber">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <div class="feat-tab" onclick="showFeat('citas')" data-feat="citas">
+          <div class="feat-tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#D97706"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div><div class="feat-tab-label">Citas</div><div class="feat-tab-sub">Agenda y calendario</div></div>
         </div>
-        <h3>Gestión de Citas</h3>
-        <p>Agenda, reprograma y cancela citas fácilmente. Vista de calendario por doctor, día, semana o mes.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon purple">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
+        <div class="feat-tab" onclick="showFeat('historial')" data-feat="historial">
+          <div class="feat-tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#7C3AED"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div><div class="feat-tab-label">Historiales</div><div class="feat-tab-sub">Registros clínicos</div></div>
         </div>
-        <h3>Historiales Clínicos</h3>
-        <p>Registros médicos completos por paciente. Accede al historial de consultas, diagnósticos y tratamientos al instante.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon pink">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+        <div class="feat-tab" onclick="showFeat('prescripciones')" data-feat="prescripciones">
+          <div class="feat-tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#BE185D"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+          </div>
+          <div><div class="feat-tab-label">Prescripciones</div><div class="feat-tab-sub">Recetas digitales</div></div>
         </div>
-        <h3>Prescripciones</h3>
-        <p>Emite recetas médicas digitales con detalle de medicamentos, dosis e indicaciones. Quedan archivadas automáticamente.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon green">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <div class="feat-tab" onclick="showFeat('facturacion')" data-feat="facturacion">
+          <div class="feat-tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#15803D"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div><div class="feat-tab-label">Facturación</div><div class="feat-tab-sub">Cobros y reportes</div></div>
         </div>
-        <h3>Facturación</h3>
-        <p>Genera facturas por consulta, controla cobros y lleva un registro financiero claro y ordenado.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <div class="feat-tab" onclick="showFeat('roles')" data-feat="roles">
+          <div class="feat-tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--blue)"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div><div class="feat-tab-label">Roles &amp; Accesos</div><div class="feat-tab-sub">Secretarias y admin</div></div>
         </div>
-        <h3>Secretarias y Roles</h3>
-        <p>Asigna roles y permisos diferenciados para secretarias, recepcionistas y administradores del sistema.</p>
       </div>
-    </div>
+
+      <!-- CONTENT PANELS -->
+      <div class="feat-content-area">
+
+        <!-- Doctores -->
+        <div class="feat-panel active" id="feat-doctores">
+          <div class="feat-panel-inner">
+            <div class="feat-panel-img">
+              <img src="images/layouts/doctoresimagen.jpg" alt="Panel de doctores en ClinicLin" onerror="this.parentElement.innerHTML='<div class=\'feat-illustration\'><div class=\'feat-illustration-icon\' style=\'background:#E8F1FB\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#1A73C8\' stroke-width=\'1.8\'><path d=\'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\'/><circle cx=\'9\' cy=\'7\' r=\'4\'/><path d=\'M22 21v-2a4 4 0 0 0-3-3.87\'/><path d=\'M16 3.13a4 4 0 0 1 0 7.75\'/></svg></div><span style=\'color:var(--muted);font-size:.85rem\'>Vista de doctores</span></div>'">
+            </div>
+            <div class="feat-panel-body">
+              <h3>Gestión de Doctores</h3>
+              <p>Administra todos los médicos de tu clínica desde un solo panel. Configura especialidades, horarios de atención, días disponibles y cupos por consulta.</p>
+              <ul class="feat-bullets">
+                <li><div class="feat-bullet-dot"></div>Perfiles completos por médico</li>
+                <li><div class="feat-bullet-dot"></div>Especialidades y subespecialidades</li>
+                <li><div class="feat-bullet-dot"></div>Horarios configurables por día</li>
+                <li><div class="feat-bullet-dot"></div>Vista de agenda individual</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pacientes -->
+        <div class="feat-panel" id="feat-pacientes">
+          <div class="feat-panel-inner">
+            <div class="feat-panel-img">
+              <img src="images/layouts/pacientesimagen.jpg" alt="Panel de pacientes en ClinicLin" style="object-fit: contain; object-position: top center;" onerror="this.parentElement.innerHTML='<div class=\'feat-illustration\'><div class=\'feat-illustration-icon\' style=\'background:#CCFBF1\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#0EA5A0\' stroke-width=\'1.8\'><path d=\'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\'/><circle cx=\'9\' cy=\'7\' r=\'4\'/></svg></div><span style=\'color:var(--muted);font-size:.85rem\'>Vista de pacientes</span></div>'">
+            </div>
+            <div class="feat-panel-body">
+              <h3>Gestión de Pacientes</h3>
+              <p>Registro detallado de cada paciente: datos personales, contacto de emergencia, seguro médico, alergias conocidas e historial de visitas anteriores.</p>
+              <ul class="feat-bullets">
+                <li><div class="feat-bullet-dot"></div>Ficha completa del paciente</li>
+                <li><div class="feat-bullet-dot"></div>Historial de consultas previas</li>
+                <li><div class="feat-bullet-dot"></div>Registro de alergias y antecedentes</li>
+                <li><div class="feat-bullet-dot"></div>Búsqueda rápida por nombre o cédula</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Citas -->
+        <div class="feat-panel" id="feat-citas">
+          <div class="feat-panel-inner">
+            <div class="feat-panel-img">
+              <img src="images/layouts/citasimagen.jpg" alt="Agenda de citas en ClinicLin" onerror="this.parentElement.innerHTML='<div class=\'feat-illustration\'><div class=\'feat-illustration-icon\' style=\'background:#FEF3C7\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#D97706\' stroke-width=\'1.8\'><rect x=\'3\' y=\'4\' width=\'18\' height=\'18\' rx=\'2\'/><line x1=\'16\' y1=\'2\' x2=\'16\' y2=\'6\'/><line x1=\'8\' y1=\'2\' x2=\'8\' y2=\'6\'/><line x1=\'3\' y1=\'10\' x2=\'21\' y2=\'10\'/></svg></div><span style=\'color:var(--muted);font-size:.85rem\'>Calendario de citas</span></div>'">
+            </div>
+            <div class="feat-panel-body">
+              <h3>Gestión de Citas</h3>
+              <p>Agenda, reprograma y cancela citas desde el calendario integrado. Vista diaria, semanal o mensual por doctor. Estados en tiempo real: confirmada, en espera o cancelada.</p>
+              <ul class="feat-bullets">
+                <li><div class="feat-bullet-dot"></div>Calendario visual interactivo</li>
+                <li><div class="feat-bullet-dot"></div>Estados: confirmada, espera, cancelada</li>
+                <li><div class="feat-bullet-dot"></div>Filtro por doctor o fecha</li>
+                <li><div class="feat-bullet-dot"></div>Notificaciones de citas del día</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Historial -->
+        <div class="feat-panel" id="feat-historial">
+          <div class="feat-panel-inner">
+            <div class="feat-panel-img">
+              <img src="images/layouts/historialimagen.jpg" alt="Historial clínico en ClinicLin" style="object-fit: contain; object-position: top center;" onerror="this.parentElement.innerHTML='<div class=\'feat-illustration\'><div class=\'feat-illustration-icon\' style=\'background:#EDE9FE\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#7C3AED\' stroke-width=\'1.8\'><path d=\'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\'/><polyline points=\'14,2 14,8 20,8\'/></svg></div><span style=\'color:var(--muted);font-size:.85rem\'>Historial clínico</span></div>'">
+            </div>
+            <div class="feat-panel-body">
+              <h3>Historiales Clínicos</h3>
+              <p>Registros médicos completos por paciente. El doctor puede revisar cualquier consulta pasada, diagnóstico, tratamiento recetado o resultado de laboratorio al instante.</p>
+              <ul class="feat-bullets">
+                <li><div class="feat-bullet-dot"></div>Registro SOAP por consulta</li>
+                <li><div class="feat-bullet-dot"></div>Diagnósticos con código CIE-10</li>
+                <li><div class="feat-bullet-dot"></div>Adjunto de documentos y estudios</li>
+                <li><div class="feat-bullet-dot"></div>Acceso inmediato desde la cita</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prescripciones -->
+        <div class="feat-panel" id="feat-prescripciones">
+          <div class="feat-panel-inner">
+            <div class="feat-panel-img">
+              <img src="images/layouts/prescripcionesimagen.jpg" alt="Prescripciones digitales en ClinicLin" style="object-fit: contain; object-position: top center;" onerror="this.parentElement.innerHTML='<div class=\'feat-illustration\'><div class=\'feat-illustration-icon\' style=\'background:#FCE7F3\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#BE185D\' stroke-width=\'1.8\'><path d=\'M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18\'/></svg></div><span style=\'color:var(--muted);font-size:.85rem\'>Recetas digitales</span></div>'">
+            </div>
+            <div class="feat-panel-body">
+              <h3>Prescripciones Digitales</h3>
+              <p>El médico emite recetas directamente desde la consulta. Cada prescripción incluye medicamento, dosis, frecuencia e indicaciones, y queda archivada en el historial del paciente.</p>
+              <ul class="feat-bullets">
+                <li><div class="feat-bullet-dot"></div>Recetas vinculadas a la consulta</li>
+                <li><div class="feat-bullet-dot"></div>Catálogo de medicamentos</li>
+                <li><div class="feat-bullet-dot"></div>Dosis e indicaciones detalladas</li>
+                <li><div class="feat-bullet-dot"></div>Historial completo de prescripciones</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Facturación -->
+        <div class="feat-panel" id="feat-facturacion">
+          <div class="feat-panel-inner">
+            <div class="feat-panel-img">
+              <img src="images/layouts/ventasimagen.jpg" alt="Facturación en ClinicLin" style="object-fit: contain; object-position: top center;" onerror="this.parentElement.innerHTML='<div class=\'feat-illustration\'><div class=\'feat-illustration-icon\' style=\'background:#DCFCE7\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#15803D\' stroke-width=\'1.8\'><line x1=\'12\' y1=\'1\' x2=\'12\' y2=\'23\'/><path d=\'M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\'/></svg></div><span style=\'color:var(--muted);font-size:.85rem\'>Facturación clínica</span></div>'">
+            </div>
+            <div class="feat-panel-body">
+              <h3>Facturación Clínica</h3>
+              <p>Genera facturas por consulta, controla cobros pendientes y lleva un registro financiero claro y ordenado. Reportes por período, doctor o tipo de servicio.</p>
+              <ul class="feat-bullets">
+                <li><div class="feat-bullet-dot"></div>Factura por consulta o servicio</li>
+                <li><div class="feat-bullet-dot"></div>Control de cobros y pagos</li>
+                <li><div class="feat-bullet-dot"></div>Reportes financieros por período</li>
+                <li><div class="feat-bullet-dot"></div>Historial de pagos por paciente</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Roles -->
+        <div class="feat-panel" id="feat-roles">
+          <div class="feat-panel-inner">
+            <div class="feat-panel-img">
+              <img src="images/layouts/dashboardadminimagen.jpg" alt="Roles y accesos en ClinicLin" onerror="this.parentElement.innerHTML='<div class=\'feat-illustration\'><div class=\'feat-illustration-icon\' style=\'background:#E8F1FB\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#1A73C8\' stroke-width=\'1.8\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div><span style=\'color:var(--muted);font-size:.85rem\'>Gestión de roles</span></div>'">
+            </div>
+            <div class="feat-panel-body">
+              <h3>Roles &amp; Accesos</h3>
+              <p>Define exactamente qué puede ver y hacer cada persona en el sistema. Secretarias, recepcionistas, médicos y administradores con permisos diferenciados.</p>
+              <ul class="feat-bullets">
+                <li><div class="feat-bullet-dot"></div>Rol de secretaria/recepcionista</li>
+                <li><div class="feat-bullet-dot"></div>Rol de médico con sus pacientes</li>
+                <li><div class="feat-bullet-dot"></div>Rol de administrador total</li>
+                <li><div class="feat-bullet-dot"></div>Auditoría de acciones por usuario</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /feat-content-area -->
+    </div><!-- /feat-tabs-wrap -->
   </div>
 </section>
 
@@ -696,21 +901,33 @@
     <div class="steps-grid">
       <div class="step">
         <div class="step-num">1</div>
+        <div class="step-img">
+          <img src="images/img-login.jpg" alt="Crea tu cuenta en ClinicLin" onerror="this.parentElement.innerHTML='<div class=\'step-illustration\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>'">
+        </div>
         <h3>Crea tu cuenta</h3>
         <p>Regístrate con los datos de tu clínica. En menos de 5 minutos tu perfil está listo.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
+        <div class="step-img">
+          <img src="images/small/img-5.jpg" alt="Configura tu equipo médico" onerror="this.parentElement.innerHTML='<div class=\'step-illustration\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\'/><circle cx=\'9\' cy=\'7\' r=\'4\'/><path d=\'M22 21v-2a4 4 0 0 0-3-3.87\'/><path d=\'M16 3.13a4 4 0 0 1 0 7.75\'/></svg></div>'">
+        </div>
         <h3>Configura tu equipo</h3>
         <p>Agrega tus doctores, secretarias y administradores con sus respectivos permisos.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
+        <div class="step-img">
+          <img src="images/small/img-6.jpg" alt="Registra tus pacientes en ClinicLin" onerror="this.parentElement.innerHTML='<div class=\'step-illustration\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\'/><circle cx=\'9\' cy=\'7\' r=\'4\'/></svg></div>'">
+        </div>
         <h3>Registra tus pacientes</h3>
         <p>Importa o registra pacientes. Sus historiales quedan guardados de forma segura.</p>
       </div>
       <div class="step">
         <div class="step-num">4</div>
+        <div class="step-img">
+          <img src="images/small/img-7.jpg" alt="Gestiona y crece con ClinicLin" onerror="this.parentElement.innerHTML='<div class=\'step-illustration\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><polyline points=\'22 12 18 12 15 21 9 3 6 12 2 12\'/></svg></div>'">
+        </div>
         <h3>Gestiona y crece</h3>
         <p>Agenda citas, emite prescripciones y genera facturas desde una sola pantalla.</p>
       </div>
@@ -786,8 +1003,6 @@
   <div class="max-w">
     <h2>¿Listo para modernizar tu clínica?</h2>
     <p>Únete a las clínicas que ya digitalizaron su gestión con ClinicLin.</p>
-    <a href="https://farasystempanama.com" target="_blank" class="btn-white">Visitar farasystempanama.com</a>
-    <p class="cta-contact">O escríbenos directo: <a href="mailto:info@farasystempanama.com">info@farasystempanama.com</a> · <a href="tel:+50768052327">+507 6805-2327</a></p>
   </div>
 </section>
 
@@ -800,14 +1015,12 @@
     ClinicLin
   </div>
   <div class="footer-links">
-    <a href="https://farasystempanama.com" target="_blank">farasystempanama.com</a>
-    <a href="mailto:info@farasystempanama.com">info@farasystempanama.com</a>
-    <a href="tel:+50768052327">+507 6805-2327</a>
   </div>
   <div class="footer-meta">© 2025 Fara System Panama. Todos los derechos reservados.</div>
 </footer>
 
 <script>
+/* ── Billing toggle ── */
 let isAnnual = false;
 const prices = { basic: [70, 750], advanced: [90, 900] };
 
@@ -824,6 +1037,48 @@ function updatePrices() {
 
 function toggleBilling() { isAnnual = !isAnnual; updatePrices(); }
 function setBilling(val) { isAnnual = val; updatePrices(); }
+
+/* ── Feature tabs ── */
+function showFeat(key) {
+  // Panels
+  document.querySelectorAll('.feat-panel').forEach(p => p.classList.remove('active'));
+  const panel = document.getElementById('feat-' + key);
+  if (panel) panel.classList.add('active');
+
+  // Tabs
+  document.querySelectorAll('.feat-tab').forEach(t => t.classList.remove('active'));
+  const tab = document.querySelector('[data-feat="' + key + '"]');
+  if (tab) {
+    tab.classList.add('active');
+    // Scroll tab into view on mobile
+    tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }
+}
+
+/* ── Nav scroll spy ── */
+(function() {
+  const sections = ['funciones', 'como-funciona', 'precios'];
+  const navLinks = {};
+  sections.forEach(id => {
+    const el = document.querySelector('.nav-links a[href="#' + id + '"]');
+    if (el) navLinks[id] = el;
+  });
+
+  function onScroll() {
+    const scrollY = window.pageYOffset + 120;
+    let current = null;
+    sections.forEach(id => {
+      const sec = document.getElementById(id);
+      if (sec && sec.offsetTop <= scrollY) current = id;
+    });
+    Object.keys(navLinks).forEach(id => {
+      navLinks[id].classList.toggle('active', id === current);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
 </script>
 </body>
 </html>

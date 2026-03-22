@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <!-- Blob background (blue tinted) -->
+  <path d="M55,270 C10,240 -5,158 20,92 C45,26 140,0 242,4 C344,8 448,52 468,120 C488,188 460,254 412,274 C364,294 262,310 168,306 C74,302 100,300 55,270Z" fill="#D4E7F8"/>
+
+  <!-- Floating: Bar chart card (top left) -->
+  <rect x="14" y="18" width="130" height="90" rx="12" fill="white" opacity="0.97"/>
+  <!-- Card title strip -->
+  <rect x="14" y="18" width="130" height="22" rx="12" fill="#1A73C8"/>
+  <rect x="14" y="28" width="130" height="12" fill="#1A73C8"/>
+  <text x="28" y="34" font-family="sans-serif" font-size="9.5" font-weight="700" fill="white">Estadísticas del Mes</text>
+  <!-- Bar chart bars -->
+  <rect x="28" y="70" width="14" height="30" rx="3" fill="#1A73C8" opacity="0.4"/>
+  <rect x="48" y="55" width="14" height="45" rx="3" fill="#1A73C8" opacity="0.6"/>
+  <rect x="68" y="45" width="14" height="55" rx="3" fill="#1A73C8"/>
+  <rect x="88" y="60" width="14" height="40" rx="3" fill="#1A73C8" opacity="0.7"/>
+  <rect x="108" y="50" width="14" height="50" rx="3" fill="#0EA5A0"/>
+  <!-- X-axis line -->
+  <line x1="24" y1="100" x2="130" y2="100" stroke="#D8E5F2" stroke-width="1.5"/>
+  <!-- Upward trend arrow -->
+  <path d="M28,82 L60,62 L88,70 L128,48" stroke="#0EA5A0" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="128" cy="48" r="3.5" fill="#0EA5A0"/>
+
+  <!-- Floating: Calendar card (top right) -->
+  <rect x="334" y="14" width="130" height="96" rx="12" fill="white" opacity="0.97"/>
+  <!-- Calendar header -->
+  <rect x="334" y="14" width="130" height="24" rx="12" fill="#1A73C8"/>
+  <rect x="334" y="26" width="130" height="12" fill="#1A73C8"/>
+  <text x="352" y="31" font-family="sans-serif" font-size="9.5" font-weight="700" fill="white">Agenda de Citas</text>
+  <!-- Nav arrows -->
+  <text x="342" y="31" font-family="sans-serif" font-size="11" fill="white" opacity="0.7">‹</text>
+  <text x="453" y="31" font-family="sans-serif" font-size="11" fill="white" opacity="0.7">›</text>
+  <!-- Day headers -->
+  <text x="344" y="52" font-family="sans-serif" font-size="7.5" fill="#8FA5B8">L</text>
+  <text x="362" y="52" font-family="sans-serif" font-size="7.5" fill="#8FA5B8">M</text>
+  <text x="380" y="52" font-family="sans-serif" font-size="7.5" fill="#8FA5B8">X</text>
+  <text x="398" y="52" font-family="sans-serif" font-size="7.5" fill="#8FA5B8">J</text>
+  <text x="416" y="52" font-family="sans-serif" font-size="7.5" fill="#8FA5B8">V</text>
+  <text x="434" y="52" font-family="sans-serif" font-size="7.5" fill="#8FA5B8">S</text>
+  <text x="452" y="52" font-family="sans-serif" font-size="7.5" fill="#8FA5B8">D</text>
+  <!-- Calendar day numbers row 1 -->
+  <text x="342" y="65" font-family="sans-serif" font-size="8" fill="#B0C4D6">29</text>
+  <text x="360" y="65" font-family="sans-serif" font-size="8" fill="#B0C4D6">30</text>
+  <text x="380" y="65" font-family="sans-serif" font-size="8" fill="#0D2340" font-weight="600">1</text>
+  <text x="398" y="65" font-family="sans-serif" font-size="8" fill="#0D2340" font-weight="600">2</text>
+  <text x="416" y="65" font-family="sans-serif" font-size="8" fill="#0D2340" font-weight="600">3</text>
+  <text x="434" y="65" font-family="sans-serif" font-size="8" fill="#0D2340" font-weight="600">4</text>
+  <text x="452" y="65" font-family="sans-serif" font-size="8" fill="#0D2340">5</text>
+  <!-- Row 2 with today highlighted -->
+  <circle cx="349" cy="77" r="9" fill="#1A73C8"/>
+  <text x="344" y="80" font-family="sans-serif" font-size="8" fill="white" font-weight="700">6</text>
+  <text x="360" y="80" font-family="sans-serif" font-size="8" fill="#0D2340" font-weight="600">7</text>
+  <text x="380" y="80" font-family="sans-serif" font-size="8" fill="#0D2340" font-weight="600">8</text>
+  <text x="398" y="80" font-family="sans-serif" font-size="8" fill="#0D2340" font-weight="600">9</text>
+  <!-- Dot indicators for appointments -->
+  <circle cx="363" cy="83" r="2.5" fill="#0EA5A0"/>
+  <circle cx="383" cy="83" r="2.5" fill="#1A73C8"/>
+  <!-- Row 3 -->
+  <rect x="339" y="88" width="24" height="14" rx="4" fill="#E8F3FD"/>
+  <text x="341" y="98" font-family="sans-serif" font-size="7.5" fill="#1A73C8" font-weight="600">12 citas</text>
+
+  <!-- Desk -->
+  <rect x="40" y="220" width="400" height="52" rx="10" fill="#A3C4E8" opacity="0.35"/>
+  <rect x="40" y="220" width="400" height="9" rx="4" fill="#88B0D8" opacity="0.4"/>
+
+  <!-- ── MAIN FIGURE (male doctor, centered) ── -->
+  <!-- White coat body -->
+  <path d="M168,172 C160,174 154,188 150,220 L256,220 C252,188 246,174 238,172 Z" fill="white"/>
+  <!-- Left coat panel -->
+  <path d="M168,172 L174,220 L150,220 Z" fill="#E8F1FA"/>
+  <!-- Right coat panel -->
+  <path d="M238,172 L232,220 L256,220 Z" fill="#E8F1FA"/>
+  <!-- Lapels -->
+  <path d="M200,172 L203,196 L203,220" fill="#E0EEF8"/>
+  <path d="M206,172 L203,196 L203,220" fill="#E0EEF8"/>
+  <!-- Tie -->
+  <path d="M200,172 L203,210 L206,172 Z" fill="#1A73C8"/>
+  <!-- Pocket with pen -->
+  <rect x="228" y="192" width="16" height="20" rx="3" fill="#E8F1FA"/>
+  <line x1="234" y1="192" x2="234" y2="212" stroke="#1A73C8" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="234" cy="191" r="2.5" fill="#0EA5A0"/>
+  <!-- Neck -->
+  <rect x="197" y="152" width="16" height="22" rx="5" fill="#F5CBA7"/>
+  <!-- Head -->
+  <circle cx="205" cy="126" r="31" fill="#F5CBA7"/>
+  <!-- Short dark hair (male doctor) -->
+  <path d="M177,112 Q174,82 192,70 Q205,62 218,70 Q236,82 233,112 Q228,105 218,103 Q205,100 192,103 Q181,105 177,112Z" fill="#1C0A00"/>
+  <!-- Ear left -->
+  <ellipse cx="175" cy="128" rx="5" ry="8" fill="#EDB97A"/>
+  <!-- Ear right -->
+  <ellipse cx="235" cy="128" rx="5" ry="8" fill="#EDB97A"/>
+  <!-- Eyes -->
+  <ellipse cx="194" cy="127" rx="4" ry="4.5" fill="#2B1505"/>
+  <ellipse cx="216" cy="127" rx="4" ry="4.5" fill="#2B1505"/>
+  <circle cx="195" cy="126" r="1.5" fill="white"/>
+  <circle cx="217" cy="126" r="1.5" fill="white"/>
+  <!-- Eyebrows -->
+  <path d="M189,120 Q194,117 199,120" stroke="#1C0A00" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M211,120 Q216,117 221,120" stroke="#1C0A00" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <!-- Smile (confident) -->
+  <path d="M196,140 Q205,149 214,140" stroke="#C06040" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <circle cx="189" cy="137" r="7" fill="#F0A070" opacity="0.18"/>
+  <circle cx="221" cy="137" r="7" fill="#F0A070" opacity="0.18"/>
+  <!-- Nose -->
+  <path d="M202,132 L200,138 L210,138" stroke="#D4855A" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Stethoscope around neck -->
+  <path d="M186,158 Q178,168 180,182 Q182,192 192,195" stroke="#1A73C8" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M224,158 Q232,168 230,182 Q228,192 218,195" stroke="#1A73C8" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="205" cy="198" r="9" fill="#1A73C8"/>
+  <circle cx="205" cy="198" r="4.5" fill="#0D2340"/>
+  <!-- Left arm (typing on laptop) -->
+  <path d="M168,178 Q150,188 144,208" stroke="white" stroke-width="15" fill="none" stroke-linecap="round"/>
+  <circle cx="143" cy="211" r="11" fill="#F5CBA7"/>
+  <!-- Right arm (raised, thumbs up / pointing at chart) -->
+  <path d="M238,178 Q255,172 268,158 Q274,148 272,138" stroke="white" stroke-width="15" fill="none" stroke-linecap="round"/>
+  <circle cx="272" cy="135" r="11" fill="#F5CBA7"/>
+
+  <!-- Laptop in front on desk -->
+  <rect x="148" y="201" width="118" height="20" rx="6" fill="#1A73C8" opacity="0.85"/>
+  <!-- Screen on laptop with small chart preview -->
+  <rect x="154" y="204" width="106" height="13" rx="3" fill="#0D2340"/>
+  <!-- Mini bars inside laptop screen -->
+  <rect x="158" y="207" width="5" height="7" rx="1" fill="#1A73C8" opacity="0.7"/>
+  <rect x="165" y="205" width="5" height="9" rx="1" fill="#1A73C8"/>
+  <rect x="172" y="203" width="5" height="11" rx="1" fill="#0EA5A0"/>
+  <rect x="179" y="206" width="5" height="8" rx="1" fill="#1A73C8" opacity="0.6"/>
+  <!-- Medical cross on lid -->
+  <rect x="200" y="203" width="14" height="4" rx="2" fill="white" opacity="0.7"/>
+  <rect x="206" y="197" width="4" height="14" rx="2" fill="white" opacity="0.7"/>
+
+  <!-- Floating: Growth / metrics badge (bottom right) -->
+  <rect x="310" y="158" width="140" height="58" rx="12" fill="white" opacity="0.97"/>
+  <text x="326" y="178" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#0D2340">Pacientes este mes</text>
+  <!-- Metric value -->
+  <text x="326" y="198" font-family="sans-serif" font-size="20" font-weight="700" fill="#1A73C8">248</text>
+  <!-- Trend: up arrow + % -->
+  <path d="M376,196 L368,204" stroke="#0EA5A0" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M376,196 L376,204 L384,196" stroke="#0EA5A0" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="390" y="202" font-family="sans-serif" font-size="11" font-weight="700" fill="#0EA5A0">↑ 12%</text>
+  <rect x="326" y="204" width="90" height="5" rx="2" fill="#D8E5F2"/>
+  <rect x="326" y="204" width="68" height="5" rx="2" fill="#1A73C8" opacity="0.5"/>
+</svg>

@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <!-- Blob background -->
+  <path d="M65,265 C20,235 0,160 22,92 C44,24 138,0 238,4 C338,8 442,48 466,118 C490,188 464,252 418,272 C372,292 270,308 178,304 C86,300 110,295 65,265Z" fill="#DCEEF9"/>
+
+  <!-- Floating: User card top-left -->
+  <rect x="18" y="28" width="118" height="74" rx="10" fill="white" opacity="0.95"/>
+  <circle cx="44" cy="52" r="14" fill="#DBEEF9"/>
+  <circle cx="44" cy="47" r="6" fill="#1A73C8" opacity="0.6"/>
+  <path d="M32,65 C32,57 37,54 44,54 C51,54 56,57 56,65" fill="#1A73C8" opacity="0.4"/>
+  <rect x="64" y="44" width="60" height="7" rx="3" fill="#1A73C8" opacity="0.3"/>
+  <rect x="64" y="55" width="44" height="6" rx="3" fill="#D8E5F2"/>
+  <rect x="64" y="78" width="50" height="16" rx="6" fill="#E8F1FB"/>
+  <text x="72" y="90" font-family="sans-serif" font-size="9" font-weight="700" fill="#1A73C8">Doctor</text>
+
+  <!-- Floating: Chat bubble top-center -->
+  <rect x="186" y="14" width="108" height="38" rx="14" fill="#1A73C8"/>
+  <circle cx="205" cy="33" r="4" fill="white" opacity="0.7"/>
+  <circle cx="219" cy="33" r="4" fill="white" opacity="0.7"/>
+  <circle cx="233" cy="33" r="4" fill="white" opacity="0.7"/>
+  <circle cx="247" cy="33" r="4" fill="white" opacity="0.7"/>
+  <circle cx="261" cy="33" r="4" fill="white" opacity="0.7"/>
+  <path d="M220,52 L228,60 L236,52" fill="#1A73C8"/>
+
+  <!-- Floating: Role card top-right -->
+  <rect x="344" y="30" width="118" height="74" rx="10" fill="white" opacity="0.95"/>
+  <circle cx="370" cy="54" r="14" fill="#CCFBF1"/>
+  <circle cx="370" cy="49" r="6" fill="#0EA5A0" opacity="0.6"/>
+  <path d="M358,67 C358,59 363,56 370,56 C377,56 382,59 382,67" fill="#0EA5A0" opacity="0.4"/>
+  <rect x="390" y="46" width="60" height="7" rx="3" fill="#0EA5A0" opacity="0.3"/>
+  <rect x="390" y="57" width="44" height="6" rx="3" fill="#D8E5F2"/>
+  <rect x="390" y="80" width="62" height="16" rx="6" fill="#CCFBF1"/>
+  <text x="396" y="92" font-family="sans-serif" font-size="9" font-weight="700" fill="#0EA5A0">Secretaria</text>
+
+  <!-- Desk -->
+  <rect x="40" y="218" width="400" height="50" rx="10" fill="#BDD9EF" opacity="0.5"/>
+  <rect x="40" y="218" width="400" height="8" rx="4" fill="#A8CCE8" opacity="0.6"/>
+
+  <!-- ── LEFT FIGURE (female, admin with headset) ── -->
+  <!-- Hair back (auburn) -->
+  <path d="M138,100 Q128,125 130,165 Q132,185 128,205" stroke="#9B3A1A" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <!-- Body - white coat -->
+  <path d="M108,170 C100,172 94,185 92,218 L192,218 C190,185 184,172 176,170 Z" fill="white"/>
+  <!-- Coat collar/lapel -->
+  <path d="M136,170 L142,195 L142,218" fill="#E8F1FB"/>
+  <path d="M148,170 L142,195 L142,218" fill="#E8F1FB"/>
+  <!-- Inner shirt (blue) -->
+  <rect x="136" y="170" width="12" height="30" rx="2" fill="#DBEEF9"/>
+  <!-- Neck -->
+  <rect x="137" y="152" width="16" height="20" rx="5" fill="#F5CBA7"/>
+  <!-- Head -->
+  <circle cx="145" cy="128" r="30" fill="#F5CBA7"/>
+  <!-- Hair top/front -->
+  <path d="M118,118 Q116,90 130,76 Q145,64 160,76 Q174,90 172,118" fill="#9B3A1A"/>
+  <!-- Side ponytail -->
+  <path d="M118,118 Q110,132 112,155 Q113,165 116,175" stroke="#9B3A1A" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <circle cx="137" cy="130" r="3.5" fill="#3D2B1F"/>
+  <circle cx="153" cy="130" r="3.5" fill="#3D2B1F"/>
+  <circle cx="138" cy="129" r="1.2" fill="white"/>
+  <circle cx="154" cy="129" r="1.2" fill="white"/>
+  <!-- Eyebrows -->
+  <path d="M133,124 Q137,121 141,124" stroke="#7A4020" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M149,124 Q153,121 157,124" stroke="#7A4020" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Smile -->
+  <path d="M138,140 Q145,147 152,140" stroke="#CC7A55" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <circle cx="133" cy="138" r="6" fill="#F0A070" opacity="0.25"/>
+  <circle cx="157" cy="138" r="6" fill="#F0A070" opacity="0.25"/>
+  <!-- Headset arc -->
+  <path d="M118,122 Q118,96 145,92 Q172,96 172,122" stroke="#1A73C8" stroke-width="5" fill="none"/>
+  <!-- Headset ear piece left -->
+  <circle cx="118" cy="126" r="9" fill="#1A73C8"/>
+  <!-- Mic arm -->
+  <path d="M118,134 L108,148" stroke="#1A73C8" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="106" cy="151" r="5" fill="#1A73C8"/>
+  <!-- Left arm (raised, hand at headset) -->
+  <path d="M108,178 Q92,182 88,170 Q84,158 94,150" stroke="white" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M108,178 Q92,182 88,170 Q84,158 94,150" stroke="#F5E8D8" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.3"/>
+  <!-- Hand -->
+  <circle cx="95" cy="148" r="11" fill="#F5CBA7"/>
+  <!-- Right arm (resting on laptop) -->
+  <path d="M176,178 Q194,185 200,205" stroke="white" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+  <!-- Laptop left (teal lid visible, logo cross) -->
+  <rect x="82" y="200" width="120" height="20" rx="4" fill="#0EA5A0" opacity="0.9"/>
+  <rect x="82" y="190" width="120" height="12" rx="3" fill="#0D2340" opacity="0.2"/>
+  <!-- Medical cross on lid -->
+  <rect x="133" y="204" width="18" height="6" rx="2" fill="white" opacity="0.8"/>
+  <rect x="139" y="198" width="6" height="18" rx="2" fill="white" opacity="0.8"/>
+
+  <!-- Plant (center) -->
+  <rect x="220" y="195" width="22" height="24" rx="4" fill="#C47A37"/>
+  <rect x="222" y="193" width="18" height="6" rx="3" fill="#A05C20"/>
+  <!-- Leaves -->
+  <path d="M231,195 Q218,175 210,160 Q222,168 231,178" fill="#3DAA60"/>
+  <path d="M231,195 Q244,175 252,160 Q240,168 231,178" fill="#2D9450"/>
+  <path d="M231,192 Q223,172 220,155 Q230,165 231,178" fill="#48C070" opacity="0.8"/>
+  <path d="M231,192 Q239,172 242,155 Q232,165 231,178" fill="#3DAA60" opacity="0.8"/>
+
+  <!-- ── RIGHT FIGURE (male, doctor on phone) ── -->
+  <!-- Body - white coat -->
+  <path d="M294,170 C286,172 280,185 278,218 L378,218 C376,185 370,172 362,170 Z" fill="white"/>
+  <!-- Coat lapels -->
+  <path d="M322,170 L328,195 L328,218" fill="#E8F1FB"/>
+  <path d="M334,170 L328,195 L328,218" fill="#E8F1FB"/>
+  <!-- Tie (blue) -->
+  <path d="M324,170 L328,182 L332,170" fill="#1A73C8"/>
+  <rect x="325" y="182" width="6" height="28" rx="3" fill="#1A73C8"/>
+  <!-- Neck -->
+  <rect x="323" y="152" width="16" height="20" rx="5" fill="#C8935A"/>
+  <!-- Head (slightly darker skin) -->
+  <circle cx="331" cy="128" r="30" fill="#E8A87C"/>
+  <!-- Hair top (dark black) -->
+  <path d="M304,118 Q302,88 320,76 Q331,68 342,76 Q360,88 358,118" fill="#1C0A00"/>
+  <!-- Hair side/back shape -->
+  <path d="M304,118 Q300,128 302,140" stroke="#1C0A00" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M358,118 Q362,128 360,140" stroke="#1C0A00" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <circle cx="322" cy="130" r="3.5" fill="#2B1505"/>
+  <circle cx="340" cy="130" r="3.5" fill="#2B1505"/>
+  <circle cx="323" cy="129" r="1.2" fill="white"/>
+  <circle cx="341" cy="129" r="1.2" fill="white"/>
+  <!-- Eyebrows -->
+  <path d="M318,124 Q322,121 326,124" stroke="#4A2800" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M336,124 Q340,121 344,124" stroke="#4A2800" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Smile -->
+  <path d="M323,140 Q331,147 339,140" stroke="#AA6030" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <circle cx="318" cy="138" r="6" fill="#D4905A" opacity="0.25"/>
+  <circle cx="344" cy="138" r="6" fill="#D4905A" opacity="0.25"/>
+  <!-- Phone (right hand at ear) -->
+  <rect x="352" y="115" width="14" height="26" rx="5" fill="#0D2340"/>
+  <rect x="354" y="118" width="10" height="18" rx="2" fill="#1A73C8" opacity="0.5"/>
+  <!-- Coiled phone cord -->
+  <path d="M359,141 Q370,155 368,165 Q366,175 358,178 Q350,182 354,190" stroke="#0D2340" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Right arm (holding phone) -->
+  <path d="M362,175 Q378,168 372,148 Q368,135 358,128" stroke="white" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <!-- Left arm (on desk) -->
+  <path d="M294,178 Q278,185 274,205" stroke="white" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+  <!-- Laptop right (teal) -->
+  <rect x="272" y="200" width="120" height="20" rx="4" fill="#1A73C8" opacity="0.9"/>
+  <!-- Medical cross -->
+  <rect x="323" y="204" width="18" height="6" rx="2" fill="white" opacity="0.8"/>
+  <rect x="329" y="198" width="6" height="18" rx="2" fill="white" opacity="0.8"/>
+
+  <!-- Floating: + add button bottom right -->
+  <circle cx="436" cy="172" r="28" fill="#1A73C8"/>
+  <rect x="425" y="170" width="22" height="5" rx="2" fill="white"/>
+  <rect x="433" y="158" width="5" height="28" rx="2" fill="white"/>
+</svg>

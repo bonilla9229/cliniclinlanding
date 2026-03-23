@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="100%" height="100%">
+    <!-- Definición de la fuente -->
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;display=swap');
+            .logo-text {
+                font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+                font-size: 48px;
+                font-weight: 700;
+            }
+        </style>
+    </defs>
+
+    <!-- Isotipo: El T-Rex / Letra R abstracta -->
+    <g transform="translate(10, 10) scale(0.8)">
+        <!-- Cuerpo principal del T-Rex (Verde Esmeralda) -->
+        <path d="M15 85 L15 15 L75 15 L75 40 L45 40 L45 50 L75 50 L75 60 L35 60 L35 85 Z" fill="#10B981"/>
+        
+        <!-- Ojo del T-Rex (Blanco para contraste en fondos oscuros) -->
+        <rect x="25" y="25" width="10" height="10" fill="#FFFFFF"/>
+        
+        <!-- Hocico / Detalle tecnológico (Verde Claro) -->
+        <path d="M75 15 L90 30 L75 40 Z" fill="#34D399"/>
+    </g>
+
+    <!-- Tipografía: RexApp (Texto "Rex" en Blanco) -->
+    <text x="100" y="66" class="logo-text" fill="#FFFFFF">
+        Rex<tspan fill="#10B981">App</tspan>
+    </text>
+</svg>

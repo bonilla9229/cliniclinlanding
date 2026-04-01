@@ -583,6 +583,33 @@
   }
   .footer-links a:hover { color: #fff; }
 
+  /* ── WHATSAPP FLOAT ── */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    background: #25D366;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .whatsapp-float:hover {
+    transform: translateY(-3px) scale(1.06);
+    box-shadow: 0 10px 32px rgba(37,211,102,0.55);
+  }
+  .whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+  }
+
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -1010,6 +1037,13 @@
   </div>
   <div class="footer-meta">© 2025 REX App. Todos los derechos reservados.</div>
 </footer>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a href="https://wa.me/50768714881" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.49.648 4.829 1.785 6.86L2 30l7.347-1.757A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.44 11.44 0 0 1-5.834-1.592l-.418-.248-4.358 1.043 1.072-4.245-.272-.434A11.46 11.46 0 0 1 4.5 16C4.5 9.596 9.596 4.5 16 4.5S27.5 9.596 27.5 16 22.404 27.5 16 27.5zm6.29-8.435c-.345-.172-2.04-1.006-2.355-1.12-.316-.115-.546-.172-.776.172-.23.345-.89 1.12-1.09 1.35-.2.23-.4.258-.746.086-.345-.172-1.456-.536-2.773-1.71-1.025-.914-1.717-2.043-1.919-2.388-.2-.345-.021-.531.151-.703.155-.155.345-.402.517-.603.172-.2.23-.345.345-.575.115-.23.057-.431-.029-.603-.086-.172-.776-1.87-1.063-2.56-.28-.673-.564-.582-.776-.593l-.661-.012a1.27 1.27 0 0 0-.92.431c-.316.345-1.207 1.179-1.207 2.876s1.235 3.336 1.407 3.566c.172.23 2.43 3.71 5.888 5.204.823.355 1.465.567 1.966.726.826.263 1.578.226 2.172.137.663-.099 2.04-.833 2.327-1.637.287-.805.287-1.494.2-1.638-.086-.143-.316-.23-.66-.402z"/>
+  </svg>
+</a>
 
 <script>
 /* ── Billing toggle ── */

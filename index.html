@@ -763,6 +763,24 @@
           </div>
           <div><div class="feat-tab-label">Roles &amp; Accesos</div><div class="feat-tab-sub">Secretarias y admin</div></div>
         </div>
+        <div class="feat-tab" onclick="showFeat('ia')" data-feat="ia">
+          <div class="feat-tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#7C3AED"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </div>
+          <div><div class="feat-tab-label">IA Clínica</div><div class="feat-tab-sub">Diagnósticos y tratamientos</div></div>
+        </div>
+        <div class="feat-tab" onclick="showFeat('farmacia')" data-feat="farmacia">
+          <div class="feat-tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#0891B2"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/></svg>
+          </div>
+          <div><div class="feat-tab-label">Farmacia</div><div class="feat-tab-sub">Inventario y despacho</div></div>
+        </div>
+        <div class="feat-tab" onclick="showFeat('odontologia')" data-feat="odontologia">
+          <div class="feat-tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#0F766E"><path d="M12 5.5c-1.5-2-4-2.5-5.5-1C4 6.5 4 10 6 12l2.5 2.5L12 18l3.5-3.5L18 12c2-2 2-5.5 0-7.5C16.5 3 14 3.5 12 5.5z"/></svg>
+          </div>
+          <div><div class="feat-tab-label">Odontología</div><div class="feat-tab-sub">Módulo dental</div></div>
+        </div>
       </div>
 
       <!-- CONTENT PANELS -->
@@ -901,6 +919,63 @@
           </div>
         </div>
 
+        <!-- IA Clínica -->
+        <div class="feat-panel" id="feat-ia">
+          <div class="feat-panel-inner">
+            <div class="feat-panel-img">
+              <img src="images/analisisIA.jpg" alt="IA para diagnósticos en ClinicLin" onerror="this.parentElement.innerHTML='<div class=\'feat-illustration\'><div class=\'feat-illustration-icon\' style=\'background:#E8F1FB\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#1A73C8\' stroke-width=\'1.8\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div><span style=\'color:var(--muted);font-size:.85rem\'>IA para diagnósticos</span></div>'">
+            </div>
+            <div class="feat-panel-body">
+              <h3>IA para Diagnósticos y Tratamientos</h3>
+              <p>Asistencia inteligente integrada directamente en la consulta. El sistema analiza síntomas, historial clínico y datos del paciente para sugerir diagnósticos probables y planes de tratamiento basados en evidencia médica.</p>
+              <ul class="feat-bullets">
+                <li><div class="feat-bullet-dot" style="background:#7C3AED"></div>Sugerencias de diagnóstico por síntomas</li>
+                <li><div class="feat-bullet-dot" style="background:#7C3AED"></div>Planes de tratamiento asistidos por IA</li>
+                <li><div class="feat-bullet-dot" style="background:#7C3AED"></div>Alertas de interacciones medicamentosas</li>
+                <li><div class="feat-bullet-dot" style="background:#7C3AED"></div>Análisis predictivo del historial clínico</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Farmacia -->
+        <div class="feat-panel" id="feat-farmacia">
+          <div class="feat-panel-inner">
+            <div class="feat-panel-img">
+              <img src="images/farmaciaDashboard.jpg" alt="Módulo de Farmacia en ClinicLin" style="object-fit: contain; object-position: top center;" onerror="this.parentElement.innerHTML='<div class=\'feat-illustration\'><div class=\'feat-illustration-icon\' style=\'background:#CFFAFE\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#0891B2\' stroke-width=\'1.8\'><path d=\'m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z\'/><line x1=\'8.5\' y1=\'8.5\' x2=\'15.5\' y2=\'15.5\'/></svg></div><span style=\'color:var(--muted);font-size:.85rem\'>Módulo de Farmacia</span></div>'">
+            </div>
+            <div class="feat-panel-body">
+              <h3>Módulo de Farmacia</h3>
+              <p>Gestiona el inventario de medicamentos de tu clínica y vincula el despacho directamente con las prescripciones médicas. Control de stock en tiempo real para evitar quiebres o vencimientos.</p>
+              <ul class="feat-bullets">
+                <li><div class="feat-bullet-dot" style="background:#0891B2"></div>Control de inventario de medicamentos</li>
+                <li><div class="feat-bullet-dot" style="background:#0891B2"></div>Despacho vinculado a prescripciones</li>
+                <li><div class="feat-bullet-dot" style="background:#0891B2"></div>Alertas de stock mínimo y vencimiento</li>
+                <li><div class="feat-bullet-dot" style="background:#0891B2"></div>Registro de ventas y movimientos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Odontología -->
+        <div class="feat-panel" id="feat-odontologia">
+          <div class="feat-panel-inner">
+            <div class="feat-panel-img">
+              <img src="images/odontograma.jpg" alt="Módulo de Odontología en ClinicLin" style="object-fit: contain; object-position: top center;" onerror="this.parentElement.innerHTML='<div class=\'feat-illustration\'><div class=\'feat-illustration-icon\' style=\'background:#CFFAFE\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#0891B2\' stroke-width=\'1.8\'><path d=\'m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z\'/><line x1=\'8.5\' y1=\'8.5\' x2=\'15.5\' y2=\'15.5\'/></svg></div><span style=\'color:var(--muted);font-size:.85rem\'>Módulo de Odontología</span></div>'">
+            </div>
+            <div class="feat-panel-body">
+              <h3>Módulo de Odontología</h3>
+              <p>Herramientas especializadas para clínicas dentales. Odontograma digital interactivo, registro de procedimientos por pieza dental, presupuestos y seguimiento de tratamientos en curso.</p>
+              <ul class="feat-bullets">
+                <li><div class="feat-bullet-dot" style="background:#0F766E"></div>Odontograma digital interactivo</li>
+                <li><div class="feat-bullet-dot" style="background:#0F766E"></div>Registro de procedimientos por pieza dental</li>
+                <li><div class="feat-bullet-dot" style="background:#0F766E"></div>Presupuestos y planes de tratamiento dental</li>
+                <li><div class="feat-bullet-dot" style="background:#0F766E"></div>Seguimiento de tratamientos en curso</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div><!-- /feat-content-area -->
     </div><!-- /feat-tabs-wrap -->
   </div>
@@ -973,15 +1048,15 @@
         <div class="plan-name">Plan Básico</div>
         <div class="plan-price">
           <span class="price-curr">USD</span>
-          <span class="price-num" id="price-basic">70</span>
+          <span class="price-num" id="price-basic">90</span>
           <span class="price-per" id="period-basic">/mes</span>
         </div>
         <p class="plan-desc">El plan ideal para iniciar tu gestión clínica.</p>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>10 Doctores</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>3 Doctores</li>
           <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Pacientes ilimitados</li>
-          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>2 Recepcionistas</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>1 Recepcionista</li>
           <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>1 Administrador</li>
         </ul>
         <a href="tel:+50768052327" class="plan-btn plan-btn-outline">Contactar ventas</a>
@@ -993,7 +1068,7 @@
         <div class="plan-name">Plan Avanzado</div>
         <div class="plan-price">
           <span class="price-curr">USD</span>
-          <span class="price-num" id="price-advanced">90</span>
+          <span class="price-num" id="price-advanced">150</span>
           <span class="price-per" id="period-advanced">/mes</span>
         </div>
         <p class="plan-desc">El plan completo sin límites de crecimiento.</p>
@@ -1004,13 +1079,10 @@
           <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Recepcionistas ilimitados</li>
           <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Administradores ilimitados</li>
         </ul>
-        <a href="tel:+50768052327" class="plan-btn plan-btn-solid">Solicitar demo</a>
+        <a href="https://wa.me/50768714881" target="_blank" class="plan-btn plan-btn-solid">Solicitar demo</a>
       </div>
     </div>
 
-    <p style="text-align:center; margin-top: 1.8rem; font-size: 0.85rem; color: var(--muted);">
-      ¿Necesitas una solución personalizada? <a href="mailto:info@rexapppanama.com" style="color: var(--blue); font-weight: 600; text-decoration: none;">Contáctanos</a>
-    </p>
   </div>
 </section>
 
@@ -1048,7 +1120,7 @@
 <script>
 /* ── Billing toggle ── */
 let isAnnual = false;
-const prices = { basic: [70, 750], advanced: [90, 900] };
+const prices = { basic: [90, 900], advanced: [150, 1500] };
 
 function updatePrices() {
   const idx = isAnnual ? 1 : 0;

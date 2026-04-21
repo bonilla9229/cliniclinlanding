@@ -389,9 +389,9 @@
 
   .plans-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 22px;
-    max-width: 760px; margin: 0 auto;
+    max-width: 1140px; margin: 0 auto;
   }
   .plan-card {
     background: #fff;
@@ -1043,43 +1043,89 @@
     </div>
 
     <div class="plans-grid">
-      <!-- Plan Básico -->
+      <!-- Plan STARTER -->
       <div class="plan-card">
-        <div class="plan-name">Plan Básico</div>
+        <div class="plan-name">STARTER</div>
         <div class="plan-price">
           <span class="price-curr">USD</span>
-          <span class="price-num" id="price-basic">90</span>
-          <span class="price-per" id="period-basic">/mes</span>
+          <span class="price-num" id="price-starter">45</span>
+          <span class="price-per" id="period-starter">/mes</span>
         </div>
-        <p class="plan-desc">El plan ideal para iniciar tu gestión clínica.</p>
+        <p class="plan-desc">Ideal para clínicas pequeñas que inician su digitalización.</p>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>3 Doctores</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>1 Doctor</li>
           <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Pacientes ilimitados</li>
           <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>1 Recepcionista</li>
           <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>1 Administrador</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Expediente Clínico</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Citas / Agenda</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Módulos: Core + 1 especialidad</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Recordatorios WhatsApp</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>IA Análisis Médico: Uso Básico</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Facturación Electrónica (PAC)</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Soporte: Correo + Chat</li>
         </ul>
-        <a href="tel:+50768052327" class="plan-btn plan-btn-outline">Contactar ventas</a>
+        <a href="https://wa.me/50768714881" target="_blank" class="plan-btn plan-btn-solid">Contactar ventas</a>
       </div>
 
-      <!-- Plan Avanzado -->
+      <!-- Plan CLÍNICA -->
       <div class="plan-card featured">
         <div class="popular-tag">Más popular</div>
-        <div class="plan-name">Plan Avanzado</div>
+        <div class="plan-name">CLÍNICA</div>
         <div class="plan-price">
           <span class="price-curr">USD</span>
-          <span class="price-num" id="price-advanced">150</span>
-          <span class="price-per" id="period-advanced">/mes</span>
+          <span class="price-num" id="price-clinica">95</span>
+          <span class="price-per" id="period-clinica">/mes</span>
         </div>
-        <p class="plan-desc">El plan completo sin límites de crecimiento.</p>
+        <p class="plan-desc">Perfecto para clínicas en crecimiento con múltiples doctores.</p>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Doctores ilimitados</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Hasta 5 Doctores</li>
           <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Pacientes ilimitados</li>
-          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Recepcionistas ilimitados</li>
-          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Administradores ilimitados</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>3 Recepcionistas</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>2 Administradores</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Expediente Clínico</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Citas / Agenda</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Módulo Core</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Medicina General</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Farmacia</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Odontologia</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Recordatorios WhatsApp</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>IA Análisis Médico: Uso medio</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Facturación Electrónica (PAC)</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Soporte: Correo + Chat</li>
         </ul>
-        <a href="https://wa.me/50768714881" target="_blank" class="plan-btn plan-btn-solid">Solicitar demo</a>
+        <a href="https://wa.me/50768714881" target="_blank" class="plan-btn plan-btn-solid">Contactar ventas</a>
+      </div>
+
+      <!-- Plan EMPRESARIAL -->
+      <div class="plan-card">
+        <div class="plan-name">EMPRESARIAL</div>
+        <div class="plan-price">
+          <span class="price-curr">USD</span>
+          <span class="price-num" id="price-empresarial">220</span>
+          <span class="price-per" id="period-empresarial">/mes</span>
+        </div>
+        <p class="plan-desc">La solución completa para grandes clínicas y cadenas.</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Doctores ilimitados</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Pacientes ilimitados</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Recepcionistas ilimitados</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Administradores ilimitados</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Expediente Clínico</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Citas / Agenda</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Módulo Core</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Medicina General</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Farmacia</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Odontologia</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Recordatorios WhatsApp</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>IA Análisis Médico: Avanzado</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Facturación Electrónica (PAC)</li>
+          <li><div class="check-ico"><svg viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#065F46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Soporte: Prioritario</li>
+        </ul>
+        <a href="https://wa.me/50768714881" target="_blank" class="plan-btn plan-btn-solid">Contactar ventas</a>
       </div>
     </div>
 
@@ -1120,14 +1166,16 @@
 <script>
 /* ── Billing toggle ── */
 let isAnnual = false;
-const prices = { basic: [90, 900], advanced: [150, 1500] };
+const prices = { starter: [45, 450], clinica: [95, 950], empresarial: [220, 2200] };
 
 function updatePrices() {
   const idx = isAnnual ? 1 : 0;
-  document.getElementById('price-basic').textContent = prices.basic[idx];
-  document.getElementById('price-advanced').textContent = prices.advanced[idx];
-  document.getElementById('period-basic').textContent = isAnnual ? '/año' : '/mes';
-  document.getElementById('period-advanced').textContent = isAnnual ? '/año' : '/mes';
+  document.getElementById('price-starter').textContent = prices.starter[idx];
+  document.getElementById('price-clinica').textContent = prices.clinica[idx];
+  document.getElementById('price-empresarial').textContent = prices.empresarial[idx];
+  document.getElementById('period-starter').textContent = isAnnual ? '/año' : '/mes';
+  document.getElementById('period-clinica').textContent = isAnnual ? '/año' : '/mes';
+  document.getElementById('period-empresarial').textContent = isAnnual ? '/año' : '/mes';
   document.getElementById('lbl-monthly').classList.toggle('active', !isAnnual);
   document.getElementById('lbl-annual').classList.toggle('active', isAnnual);
   document.getElementById('billing-sw').classList.toggle('on', isAnnual);
